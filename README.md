@@ -8,9 +8,9 @@ In this data science and machine learning project, we classify actors and actres
 5. Natalie Portman
 
 Here is the folder structure:
-client : This contains UI website code
-server: Python flask server
-model: Contains python notebook for model building
+1. client : This contains UI website code
+2. server: Python flask server
+3. model: Contains python notebook for model building
 
 Technologies used in this project:
 
