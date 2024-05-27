@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">Celebrity Classifier</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+        <div class="col card-wrapper" data-player="angelina_jolie">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/angelina2.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h5 class="text-uppercase card-title">Angelina Jolie</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-wrapper" data-player="denzel_washington">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/denzel2.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h5 class="text-uppercase card-title">Denzel Washington</h5>
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col card-wrapper" data-player="leonardo_di_caprio">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/leo1.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h5 class="text-uppercase card-title">Leonardo Di Caprio</h5>
+                            </p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col card-wrapper" data-player="megan_fox">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/megan1.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h5 class="text-uppercase card-title">Megan Fox</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col card-wrapper" data-player="natalie_portman">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/natalie1.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h5 class="text-uppercase card-title">Natalie Portman</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>
+            </div>
+
+            <div class="col-sm-4" id="resultHolder">
+            </div>
+                <div class="col-sm-4" id="divClassTable">
+                    <table id="classTable">
+                            <tr>
+                                <th>Celebrity</th>
+                                <th>Probability Score</th>
+                            </tr>
+                            <tr>
+                                <td>Angelina Jolie</td>
+                                <td id="score_angelina_jolie"></td>
+                            </tr>
+                            <tr>
+                                <td>Denzel Washington</td>
+                                <td id="score_denzel_washington"></td>
+                            </tr>
+                            <tr>
+                                <td>Leonardo Di Caprio</td>
+                                <td id="score_leonardo_di_caprio"></td>
+                            </tr>
+                            <tr>
+                                <td>Megan Fox</td>
+                                <td id="score_megan_fox"></td>
+                            </tr>
+                            <tr>
+                                <td>Natalie Portman</td>
+                                <td id="score_natalie_portman"></td>
+                            </tr>
+                    </table>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
+</html>
